@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-  before_action :set_attendee, only: [:show, :edit, :update, :destroy]
+  before_action :set_attendee, only: [:show, :edit, :update, :destroy, :assign_session]
 
   # GET /attendees
   # GET /attendees.json
@@ -71,4 +71,8 @@ class AttendeesController < ApplicationController
     def attendee_params
       params.require(:attendee).permit(:first_name, :last_name, :e_mail)
     end
+
+  def assign_session
+
+  end
 end
